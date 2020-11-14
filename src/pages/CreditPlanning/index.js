@@ -10,11 +10,11 @@ export default function CreditPlanning() {
     <div className="credit-container">
       <header className="header-content">
         <Link to={'/'} className="nav-back">
-          <MdKeyboardArrowLeft size="3rem" color="#fa7268" />
+          <MdKeyboardArrowLeft size="3.2rem" color="#fa7268" />
         </Link>
-        <h2>Nome do planejamento</h2>
+        <h1>Nome do planejamento</h1>
         <Link to={'/planning'} className="nav-info">
-          <MdInfoOutline size="2.5rem" color="#fa7268" />
+          <MdInfoOutline size="2.8rem" color="#fa7268" />
         </Link>
       </header>
       <main className="main-container">
@@ -39,11 +39,11 @@ export default function CreditPlanning() {
         <section className="section-steps">
           <ul className="steps-list">
             <li className="list-item">
-              <b>Já tenho crédito pré aprovado?</b>
+              <b>Já tenho crédito pré aprovado? </b>
               Não, todas as análises serão feitas 
               em cima dos documentos enviados.</li>
             <li className="list-item">
-              <b>É possivel ter mais de uma linha de crédito?</b>
+              <b>É possivel ter mais de uma linha de crédito? </b>
               Sim, para cada planejamento financeiro imputado na plataforma,
                uma nova linha de crédito pode ser solicitada.</li>
           </ul>
@@ -51,7 +51,7 @@ export default function CreditPlanning() {
 
         <button className="button-analyze">
           Solicitar análise
-          <AiOutlineRise className="icon-analyze" size="2rem" color="#fa7268" />
+          <AiOutlineRise className="icon-analyze" size="2.8rem" color="#fa7268" />
         </button>
       </main>
     </div>
