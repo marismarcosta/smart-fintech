@@ -1,0 +1,68 @@
+.main-container-blog {
+  margin: 4rem 1.4rem;
+  font: 'Space Grotesk';
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container-blog .order-title {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.main-container-blog .card-blog {
+  margin-top: 2rem;
+  height: 15rem;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-container-blog .card-title {
+  color: var(--color-primary);
+  padding: 2.5rem;
+}
+
+.main-container-blog .container-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-container-blog .info-blog {
+  margin: 0 0 1rem 1.5rem;
+  color: var(--color-blog-purple);
+}
+
+.main-container-blog .info-date {
+  margin: 0 1.5rem 1rem 0;
+  color: rgba(58, 56, 56, 0.61);
+}
+
+.select-container { 
+  width: 100%;
+  height: 5.5rem;
+  overflow: hidden;
+  background: url(../../assets/icons/arrow-options.png) no-repeat 95% #FFFFFF;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.select-container select { 
+  background: transparent;
+  color: var(--color-primary);
+  font-weight: 500;
+  width: 96%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+} 
