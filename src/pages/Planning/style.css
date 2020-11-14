@@ -9,7 +9,7 @@
 
 .planning main {
   margin: 4rem 1.4rem;
-  font: 'Space Grotesk';
+  font: "Space Grotesk";
   font-size: 1.6rem;
 }
 
@@ -56,10 +56,11 @@
 
 .planning-card .planning-info > h2 {
   color: var(--color-primary);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .planning-card .planning-info > p {
+  font-size: 1.4rem;
   margin-top: 0.6rem;
   color: var(--color-subtitle-complement);
 }

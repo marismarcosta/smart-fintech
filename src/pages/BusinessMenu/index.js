@@ -1,22 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { 
-  MdKeyboardArrowLeft, AiOutlineDollarCircle,
-  FiTrendingUp, SiGooglescholar, AiOutlineSchedule
-} from 'react-icons/all';
+import {
+  MdKeyboardArrowLeft,
+  AiOutlineDollarCircle,
+  AiOutlineSchedule,
+  ImFilesEmpty,
+  RiBarChartLine,
+  CgWebsite,
+} from "react-icons/all";
 
-import './style.css';
+import "./style.css";
 
 //.navBack:link, .navBack:visited {text-decoration: none}
 
 function BusinessMenu() {
   return (
     <div className="business-menu">
-
       <header>
         <Link className="header-content">
-          <MdKeyboardArrowLeft/> 
+          <MdKeyboardArrowLeft size="35" />
         </Link>
         <h1>Meu negócio</h1>
       </header>
@@ -28,48 +31,39 @@ function BusinessMenu() {
       <div class="items-grid">
         <Link to="/planning" className="menu-cards">
           <li>
-              <AiOutlineSchedule/>
-              <span>Planejamentos</span>
-          </li>
-        </Link>
-        
-        <Link className="menu-cards">
-          <li>
-            <SiGooglescholar/>
-            <span>Educativo</span>
+            <AiOutlineSchedule />
+            <span>Planejamentos</span>
           </li>
         </Link>
 
         <Link className="menu-cards">
           <li>
-            <AiOutlineDollarCircle/>
+            <RiBarChartLine />
             <span>Inteligência de mercado</span>
           </li>
         </Link>
-        
-        <Link className="menu-cards">
+
+        <Link to="supporting-materials" className="menu-cards">
           <li>
-            <AiOutlineDollarCircle/>
-            <span>Nateriais de apoio</span>
+            <ImFilesEmpty />
+            <span>Materiais de apoio</span>
           </li>
         </Link>
-       
-        <Link className="menu-cards">
+
+        <Link to="planning-credit" className="menu-cards">
           <li>
-            <FiTrendingUp size="25"/>
+            <AiOutlineDollarCircle size="25" />
             <span>Linhas de crédito</span>
           </li>
         </Link>
-        
-        <Link className="menu-cards">  
+
+        <Link to="" className="menu-cards">
           <li>
-            <FiTrendingUp size="25"/>
+            <CgWebsite size="25" />
             <span>Blog Linker</span>
           </li>
         </Link>
-        
       </div>
-
     </div>
   );
 }
