@@ -1,0 +1,105 @@
+
+body svg {
+  color: var(--color-secundary);
+  font-size: 24px;
+}
+
+body svg:hover {
+  transform: scale(1.2);
+}
+
+body h3 {
+  text-align: left;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+header h1 {
+  flex: 1;
+  color: var(--color-primary);
+  font-size: medium;
+  margin-left: 20px;
+}
+
+h3 {
+  font-weight: 400;
+  color: var(--color-subtitle-complement)
+}
+
+h3 strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-title h2 {
+  color: var(--color-primary);
+}
+
+.sub-title hr {
+  width: 300px;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.items-grid {
+    /* o grid permite organizar o template como uma tabela */
+    display: grid;
+    /* o template-columns é setado como você quer organizar a tabela */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    row-gap: 0.01rem;
+}
+
+.items-grid li {
+    margin-top: 30px;
+    background-color: var(--background-color);
+    border-radius: 15px;
+    list-style-type: none;
+
+    /* border: 2px solid var(--color-secundary); */
+
+    padding: 16px 15px 15px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.items-grid li:hover {
+  transform: scale(1.05);
+}
+
+.items-grid li span {
+    width: 100%;
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: small;
+}
+
+.items-grid li svg,
+.items-grid li span {
+    pointer-events: none;
+}
