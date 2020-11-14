@@ -42,22 +42,23 @@ function PlanDetails() {
       </div>
 
       <div>
-        <h1>Mercado de atuação</h1>
+        <h1>Mercado de atuação:</h1>
         <div className="select-box">
-          Escolher <IoIosArrowDown/>
+          <p>Escolher</p> 
+          <IoIosArrowDown/>
         </div>
       </div>
 
       <div>
-        <h1>Momento / Maturidade</h1>
+        <h1>Momento / Maturidade:</h1>
         <div className="select-box">
-          Escolher <IoIosArrowDown/>
+          <p>Escolher</p><IoIosArrowDown/>
         </div>
       </div>
     </div>
 
     <div class="attachment-container">
-      <p>Anexos</p>
+      <h1>Anexos</h1>
 
       <div class="items-grid">
         <li>
@@ -79,9 +80,9 @@ function PlanDetails() {
       </div>
     </div>
 
-    <div>
+    <div class="section-1">
       <div>
-        <h4>Período</h4>
+        <h1>Período</h1>
 
         <div className="select-box">
           Escolher <IoIosArrowDown/>
@@ -89,7 +90,7 @@ function PlanDetails() {
       </div>
 
       <div>
-        <h4>Data de início</h4>
+        <h1>Data de início</h1>
 
         <div className="select-many-box">
           <div className="select-box">
