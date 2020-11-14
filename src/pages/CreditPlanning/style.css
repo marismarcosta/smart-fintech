@@ -1,0 +1,86 @@
+.credit-container .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-primary);
+  }
+  
+  .credit-leaf {
+    width: 100%;
+    height: 61px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  .credit-total-text {
+    color: var(--color-primary);
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: bold;
+  }
+
+  .credit-value {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--color-secundary);
+    padding: 10px;
+  }
+
+  .main-container p {
+    text-align: start;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 23px 0 5px;
+    color: var(--color-text);
+  }
+
+  .main-container .section-steps {
+    width: 100%;
+    height: 173px;
+    background: var(--color-background);
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+  }
+
+  .main-container .steps-list {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    padding: 15px;
+    color: var(--color-primary);
+  }
+
+  .main-container .list-item {
+    border-bottom: 1px solid rgba(97, 97, 97, 0.4);
+    line-height: 15px;
+  }
+
+  .main-container .button-analyze {
+    width: 100%;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    height: 34px;
+    color: var(--color-primary);
+    margin-top: 30px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  .main-container .icon-analyze {
+    margin-left: 8px;
+  }
