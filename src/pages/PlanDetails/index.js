@@ -28,9 +28,9 @@ function PlanDetails() {
           </h2>
       </div>
 
-    <div>
+    <div class="section-1">
       <div>
-        <p>Descrição</p>
+        <h1>Descrição:</h1>
 
         <div className="description-box">
           <p>O que faz, como faz, onde faz - descrição reduzida.
@@ -42,14 +42,14 @@ function PlanDetails() {
       </div>
 
       <div>
-        <h4>Mercado de atuação</h4>
+        <h1>Mercado de atuação</h1>
         <div className="select-box">
           Escolher <IoIosArrowDown/>
         </div>
       </div>
 
       <div>
-        <h4>Momento / Maturidade</h4>
+        <h1>Momento / Maturidade</h1>
         <div className="select-box">
           Escolher <IoIosArrowDown/>
         </div>

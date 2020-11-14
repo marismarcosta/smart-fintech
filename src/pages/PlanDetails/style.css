@@ -41,6 +41,7 @@ h3 strong {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 25px;
 }
 
 .sub-title h2 {
@@ -56,32 +57,68 @@ h3 strong {
 
 }
 
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.section-1 h1{
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  font-size: small;
+  font-weight: 400;
+  color: var(--color-subtitle-complement);
+}
+
+.description-box {
+  margin-top: 10px;
+  text-align: left;
+  border-radius: 10px;
+  padding: 16px 15px 25px 16px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.description-box p{
+  color: var(--color-primary);
+  font-size: small;
+}
+
+.select-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 15px 25px 16px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
 .items-grid {
-    /* o grid permite organizar o template como uma tabela */
-    display: grid;
-    /* o template-columns é setado como você quer organizar a tabela */
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    row-gap: 0.01rem;
+  /* o grid permite organizar o template como uma tabela */
+  display: grid;
+  /* o template-columns é setado como você quer organizar a tabela */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  row-gap: 0.01rem;
 }
 
 .items-grid li {
-    margin-top: 30px;
-    background-color: var(--background-color);
-    border-radius: 15px;
-    list-style-type: none;
+  margin-top: 30px;
+  background-color: var(--background-color);
+  border-radius: 15px;
+  list-style-type: none;
 
-    /* border: 2px solid var(--color-secundary); */
+  /* border: 2px solid var(--color-secundary); */
 
-    padding: 16px 15px 15px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+  padding: 16px 15px 15px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 
 .items-grid li:hover {
