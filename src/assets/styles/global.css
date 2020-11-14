@@ -24,7 +24,7 @@ body {
   font-weight: 400;
   background: var(--color-background);
   color: var(--color-title);
-  padding: 3rem;
+  padding: 2rem;
 }
 
 #root {
