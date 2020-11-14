@@ -12,6 +12,10 @@ body svg {
     text-align: left;
   }
   
+  .header-nav:link, .header-nav:visited {
+    text-decoration: none;
+  }
+
   header {
       display: flex;
       align-items: center;
@@ -35,6 +39,10 @@ body svg {
   h3 strong {
     color: var(--color-text);
     font-weight: 700;
+  }
+
+  .cards:link, .cards:visited {
+    text-decoration: none;
   }
   
   .items-grid {

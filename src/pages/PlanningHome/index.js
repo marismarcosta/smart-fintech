@@ -1,5 +1,9 @@
 import React from 'react';
-import { MdKeyboardArrowLeft, AiOutlineDollarCircle, FiTrendingUp, GoGraph, AiFillEdit } from 'react-icons/all';
+import { Link } from 'react-router-dom';
+import { 
+  MdKeyboardArrowLeft, AiOutlineDollarCircle, 
+  FiTrendingUp, GoGraph, AiFillEdit 
+} from 'react-icons/all';
 
 import './style.css';
 
@@ -8,7 +12,10 @@ function PlanningHome() {
     <div className="business-menu">
 
       <header>
-        <MdKeyboardArrowLeft/> <h1>Planejamento Financeiro 2020.2</h1>
+        <Link to="/planning" className="header-nav">
+          <MdKeyboardArrowLeft/>
+        </Link>
+        <h1>Planejamento Financeiro 2020.2</h1>
       </header>
 
       <div className="sub-title">
@@ -18,26 +25,34 @@ function PlanningHome() {
       </div>
 
       <div class="items-grid">
-
-        <li>
-          <AiFillEdit/>
-          <span>Detalhes / Editar</span>
-        </li>
-        <li>
-          <GoGraph/>
-          <span>Análise financeira</span>
-        </li>
-        <li>
-          <AiOutlineDollarCircle/>
-          <span>Solicitação de crédito</span>
-        </li>
-        <li>
-          <FiTrendingUp size="25"/>
-          <span> Acompanhamento</span>
-        </li>
-
+        <Link className="cards">
+          <li>
+            <AiFillEdit/>
+            <span>Detalhes / Editar</span>
+          </li>
+        </Link>
+        
+        <Link className="cards">
+          <li>
+            <GoGraph/>
+            <span>Análise financeira</span>
+          </li>
+        </Link>
+       
+        <Link className="cards">
+          <li>
+            <AiOutlineDollarCircle/>
+            <span>Solicitação de crédito</span>
+          </li>
+        </Link>
+        
+        <Link className="cards">
+          <li>
+            <FiTrendingUp size="25"/>
+            <span> Acompanhamento</span>
+          </li>
+        </Link>
       </div>
-
 
     </div>
   );

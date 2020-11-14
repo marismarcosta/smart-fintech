@@ -6,6 +6,7 @@ import Planning from './pages/Planning';
 import CreditPlanning from './pages/CreditPlanning';
 import SupportingMaterials from './pages/SupportingMaterials';
 import PlannigHome from './pages/PlanningHome';
+import PlanDetails from './pages/PlanDetails';
 import BlogLinker from './pages/BlogLinker';
 
 function Routes() {
@@ -14,6 +15,7 @@ function Routes() {
       <Route path="/" exact component={BusinessMenu} />
       <Route path="/planning" component={Planning} />
       <Route path="/financial" component={PlannigHome}/>
+      <Route path="/details" component={PlanDetails}/>
       
       <Route path="/credit-planning" component={CreditPlanning} />
       <Route path="/supporting-materials" component={SupportingMaterials} />
