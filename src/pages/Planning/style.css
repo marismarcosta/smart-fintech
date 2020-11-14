@@ -41,6 +41,10 @@
   position: relative;
 }
 
+.planning-card:hover {
+  transform: scale(1.05);
+}
+
 .planning-card .planning-info {
   margin: 0.8rem 2.2rem;
 }
