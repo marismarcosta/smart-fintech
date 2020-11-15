@@ -14,9 +14,8 @@ function Routes() {
     <BrowserRouter>
       <Route path="/" exact component={BusinessMenu} />
       <Route path="/planning" component={Planning} />
-      <Route path="/financial" component={PlannigHome}/>
-      <Route path="/details" component={PlanDetails}/>
-      
+      <Route path="/financial/:id/:name" component={PlannigHome}/>
+      <Route path="/details/:id/:name" component={PlanDetails}/>
       <Route path="/credit-planning" component={CreditPlanning} />
       <Route path="/supporting-materials" component={SupportingMaterials} />
       <Route path="/blog-linker" component={BlogLinker} />

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect} from 'react';
+import { Link, useParams} from 'react-router-dom';
 import { 
   MdKeyboardArrowLeft, AiOutlineDollarCircle, 
   FiTrendingUp, GoGraph, AiFillEdit 
@@ -8,6 +8,9 @@ import {
 import './style.css';
 
 function PlanningHome() {
+  let {id, name} = useParams();
+  
+
   return (
     <div className="business-menu">
 
@@ -15,17 +18,17 @@ function PlanningHome() {
         <Link to="/planning" className="header-nav">
           <MdKeyboardArrowLeft/>
         </Link>
-        <h1>Planejamento Financeiro 2020.2</h1>
+        <h1>{name}</h1>
       </header>
 
       <div className="sub-title">
         <h3>../Planejamentos /
-          <strong> Planejamento Financeiro 2020.2</strong>
+          <strong> {name}</strong>
         </h3>
       </div>
 
       <div class="items-grid">
-        <Link className="cards">
+        <Link to={`/details/${id}/${name}`} className="cards">
           <li>
             <AiFillEdit/>
             <span>Detalhes / Editar</span>

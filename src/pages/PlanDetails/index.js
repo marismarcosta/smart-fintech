@@ -1,5 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Link, useParams} from 'react-router-dom';
+
+import api from "../../services/api";
 
 import {
   MdModeEdit, FaReceipt,
@@ -13,63 +15,68 @@ import './style.css';
 import OperationTable from './operationTable';
 
 function PlanDetails() {
+  let {id, name} = useParams();
 
-  const operationOptions = [
-    'Escolher', 'Marcketing', 'Vendas', 'Suprimentos', 'Technologia'
-  ];
+  const [plan, setPlan] = useState({});
 
-  const maturityOptions = [
-    'Escolher', 'Iniciante', 'Intermediário', 'Experiente', 'Expecialista'
-  ];
+  const [operationOptions,setOperationOptions] = useState([]);
 
-  const periodOptions = [
-    'Escolher', '2021.1', '2021.2', '2022.1', '2022.2'
-  ];
+  const [maturityOptions,setMaturityOptions] = useState([]);
 
-  let dayOptions = ['Dia'];
+  const [periodOptions,setPeriodOptions] = useState([ '2021.1', '2021.2', '2022.1', '2022.2']);
+
+  const [monthOptions,setMonthOptions] = useState([ 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho','Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']);
+
+  const [yearOptions,setYearOptions] = useState(['2020', '2021', '2022', '2023']);
+
+  let dayOptions = [];
   for(let i=1; i < 31; i++ ){
     dayOptions.push(i);
   }
 
-  const monthOptions = [
-    'Mês', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
-    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-  ];
+  useEffect(()=>{
+    api
+      .get(`Plannings/GetList`)
+      .then(res => {
+        const plans = res.data;
+        const currentPlan = plans.find((plan, index, array) => plan.id === id);
+        setPlan(currentPlan);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },[])
 
-  const yearOptions = [
-    'Ano','2020', '2021', '2022', '2023',
-  ];
+  useEffect(()=>{
+
+    setOperationOptions([plan.businessOccupation?.description,'Marcketing', 'Vendas', 'Suprimentos', 'Technologia']);
+    setMaturityOptions([plan.maturity?.description, 'Iniciante', 'Intermediário', 'Experiente', 'Expecialista' ]);
+
+  },[plan])
+
+
 
   return (
     <div className="business-menu">
 
       <header>
-        <MdModeEdit/> <h1>Nome do planejamento</h1> 
-        <Link className="close-section"><AiOutlineClose/></Link>
+        <MdModeEdit/> <h1>{name}</h1> 
+        <Link to="/planning" className="close-section"><AiOutlineClose/></Link>
       </header>
 
       <div className="sub-section">
-        <h3>../Planejamento Financeiro 2020.2 /
+        <h3>../{name}/
           <strong> Detalhes</strong>
         </h3>
       </div>
 
-      <div class="sub-title">
-          <h2>
-              <strong>Planejamento Financeiro 2020.2</strong>
-              <hr/>
-          </h2>
-      </div>
-
+      
     <div class="section-1">
       <div>
         <h1>Descrição:</h1>
 
         <div className="description-box">
-          <p>O que faz, como faz, onde faz - descrição reduzida.
-            <br/>
-            Modelo de negócio y, geração de receita por meio
-            de assinaturas.
+          <p>O que faz, como faz, onde faz - descrição reduzida. Modelo de negócio y, geração de receita por meio de assinaturas.
           </p>
         </div>
       </div>
@@ -157,7 +164,7 @@ function PlanDetails() {
         <div className="amount-content">
           <h1>*Capital em Caixa</h1>
           <div className="amount-box">
-            <p>R$ 15.000,00</p>
+            <p>{plan.investmentValueLabel}</p>
           </div>
         </div>
       </div>

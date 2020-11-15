@@ -35,28 +35,28 @@ function BusinessMenu() {
           </li>
         </Link>
         
-        <Link className="menu-cards">
+        <Link to="/supporting-materials" className="menu-cards">
           <li>
             <ImFilesEmpty/>
             <span>Materiais de apoio</span>
           </li>
         </Link>
 
-        <Link className="menu-cards">
+        <Link to="" className="menu-cards">
           <li>
             <RiBarChartLine/>
             <span>Inteligência de mercado</span>
           </li>
         </Link>
        
-        <Link className="menu-cards">
+        <Link to="/credit-planning" className="menu-cards">
           <li>
             <AiOutlineDollarCircle size="25"/>
             <span>Linhas de crédito</span>
           </li>
         </Link>
         
-        <Link className="menu-cards">  
+        <Link to= "/blog-linker" className="menu-cards">  
           <li>
             <CgWebsite size="25"/>
             <span>Blog Linker</span>

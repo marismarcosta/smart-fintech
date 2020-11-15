@@ -83,6 +83,7 @@ h3 strong {
 .description-box p{
   color: var(--color-text);
   font-size: small;
+  overflow: hidden;
 }
 
 .select-box {
