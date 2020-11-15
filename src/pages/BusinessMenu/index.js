@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { 
-  MdKeyboardArrowLeft, AiOutlineDollarCircle,
-  FiTrendingUp, SiGooglescholar, AiOutlineSchedule
+  MdKeyboardArrowLeft,
+  AiOutlineDollarCircle,
+  ImFilesEmpty,  
+  AiOutlineSchedule,
+  CgWebsite,
+  RiBarChartLine
 } from 'react-icons/all';
 
 import './style.css';
-
-//.navBack:link, .navBack:visited {text-decoration: none}
 
 function BusinessMenu() {
   return (
@@ -35,35 +37,28 @@ function BusinessMenu() {
         
         <Link className="menu-cards">
           <li>
-            <SiGooglescholar/>
-            <span>Educativo</span>
+            <ImFilesEmpty/>
+            <span>Materiais de apoio</span>
           </li>
         </Link>
 
         <Link className="menu-cards">
           <li>
-            <AiOutlineDollarCircle/>
+            <RiBarChartLine/>
             <span>Inteligência de mercado</span>
-          </li>
-        </Link>
-        
-        <Link className="menu-cards">
-          <li>
-            <AiOutlineDollarCircle/>
-            <span>Nateriais de apoio</span>
           </li>
         </Link>
        
         <Link className="menu-cards">
           <li>
-            <FiTrendingUp size="25"/>
+            <AiOutlineDollarCircle size="25"/>
             <span>Linhas de crédito</span>
           </li>
         </Link>
         
         <Link className="menu-cards">  
           <li>
-            <FiTrendingUp size="25"/>
+            <CgWebsite size="25"/>
             <span>Blog Linker</span>
           </li>
         </Link>

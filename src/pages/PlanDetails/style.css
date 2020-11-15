@@ -81,7 +81,7 @@ h3 strong {
 }
 
 .description-box p{
-  color: var(--color-primary);
+  color: var(--color-text);
   font-size: small;
 }
 
@@ -104,6 +104,46 @@ h3 strong {
   transform: scale(1.05);
 }
 
+.select-operation {
+  background: var(--color-background);
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  padding: 15px 10px 15px 16px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.select-operation option {
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  border: 0;
+}
+
+.select-operation:focus {
+  border-color: none;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.date-picker {
+  background: var(--color-background);
+  border-radius: 5px;
+  border: 0;
+  padding: 15px 10px 15px 16px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
 .attachment-container {
   margin-top: 25px;
   text-align: left;
@@ -113,6 +153,36 @@ h3 strong {
   font-size: small;
   font-weight: 400;
   color: var(--color-subtitle-complement);
+}
+
+.amount-content {
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amount-content h1 {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: medium;
+}
+
+.amount-box {
+  background: var(--color-background);
+  border-radius: 15px;
+  border: 0;
+  padding: 10px 30px 10px 30px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.amount-box {
+  color: var(--color-primary);
+  font-size: small;
+  font-weight: bold;
 }
 
 .items-grid {
@@ -127,6 +197,7 @@ h3 strong {
   background-color: var(--background-color);
   border-radius: 15px;
   list-style-type: none;
+  height: 90px;
 
   padding: 16px 15px 15px 16px;
   display: flex;
@@ -157,4 +228,89 @@ h3 strong {
 .items-grid li svg,
 .items-grid li span {
     pointer-events: none;
+}
+
+.table-nav {
+  /* width: 100%; */
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px 15px;
+}
+
+thead th {
+  color: var(--color-primary);
+  font-size: small;
+  text-align: left;
+  padding: 12px;
+}
+
+tbody td {
+  padding: 12px;
+}
+
+tbody tr {
+  background: var(--color-background);
+  border-radius: 5px;
+  /* border: 0; */
+  padding: 5px 5px 5px 10px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.delete-row {
+  display: flex;
+  align-items: center;
+}
+
+.delete-row strong {
+  margin-left: 10px;
+  font-size: small;
+  font-weight: 400;
+  text-align: left;
+}
+
+.delete-row button {
+  background-color: var(--color-background);
+  border: 0;
+}
+
+.add-new-row button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-background);
+  border-radius: 15px;
+  border: 0;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.plan-amount {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--color-background);
+  border-radius: 15px;
+  border: 0;
+  padding: 15px 10px 15px 10px;
+  box-shadow: 0.3rem 0.3rem 2rem 0.3rem rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.plan-amount p {
+  font-size: small;
+}
+
+.plan-value {
+  color: var(--color-primary);
 }

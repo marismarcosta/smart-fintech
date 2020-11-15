@@ -1,18 +1,51 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import {
-    MdModeEdit, AiOutlineDollarCircle,
-    FiTrendingUp, GoGraph, AiFillEdit,
-    AiOutlineClose, IoIosArrowDown
+  MdModeEdit, FaReceipt,
+  RiPictureInPictureLine, 
+  MdArtTrack, 
+  MdChromeReaderMode,
+  AiOutlineClose
 } from 'react-icons/all';
 
 import './style.css';
+import OperationTable from './operationTable';
 
 function PlanDetails() {
+
+  const operationOptions = [
+    'Escolher', 'Marcketing', 'Vendas', 'Suprimentos', 'Technologia'
+  ];
+
+  const maturityOptions = [
+    'Escolher', 'Iniciante', 'Intermediário', 'Experiente', 'Expecialista'
+  ];
+
+  const periodOptions = [
+    'Escolher', '2021.1', '2021.2', '2022.1', '2022.2'
+  ];
+
+  let dayOptions = ['Dia'];
+  for(let i=1; i < 31; i++ ){
+    dayOptions.push(i);
+  }
+
+  const monthOptions = [
+    'Mês', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 
+    'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+  ];
+
+  const yearOptions = [
+    'Ano','2020', '2021', '2022', '2023',
+  ];
+
   return (
     <div className="business-menu">
 
       <header>
-        <MdModeEdit/> <h1>Nome do planejamento</h1> <AiOutlineClose/>
+        <MdModeEdit/> <h1>Nome do planejamento</h1> 
+        <Link className="close-section"><AiOutlineClose/></Link>
       </header>
 
       <div className="sub-section">
@@ -43,17 +76,22 @@ function PlanDetails() {
 
       <div>
         <h1>Mercado de atuação:</h1>
-        <div className="select-box">
-          <p>Escolher</p> 
-          <IoIosArrowDown/>
-        </div>
+
+        <select className="select-operation">
+          {operationOptions.map((operation) => (
+            <option value={operation}>{operation}</option> 
+          ))}
+        </select>
       </div>
 
       <div>
         <h1>Momento / Maturidade:</h1>
-        <div className="select-box">
-          <p>Escolher</p><IoIosArrowDown/>
-        </div>
+
+        <select className="select-operation">
+          {maturityOptions.map((operation) => (
+            <option value={operation}>{operation}</option> 
+          ))}
+        </select>
       </div>
     </div>
 
@@ -62,19 +100,19 @@ function PlanDetails() {
 
       <div class="items-grid">
         <li>
-          <AiFillEdit/>
+          <MdChromeReaderMode/>
           <span>DRE</span>
         </li>
         <li>
-          <GoGraph/>
+          <MdArtTrack size="30"/>
           <span>Pitch Deck</span>
         </li>
         <li>
-          <AiOutlineDollarCircle/>
+          <FaReceipt/>
           <span>Extratos Bancários</span>
         </li>
         <li>
-          <FiTrendingUp size="25"/>
+          <RiPictureInPictureLine size="25"/>
           <span>Outros documentos</span>
         </li>
       </div>
@@ -84,33 +122,48 @@ function PlanDetails() {
       <div>
         <h1>Período</h1>
 
-        <div className="select-box">
-          Escolher <IoIosArrowDown/>
-        </div>
+        <select className="select-operation">
+          {periodOptions.map((operation) => (
+            <option value={operation}>{operation}</option> 
+          ))}
+        </select>
       </div>
 
       <div>
         <h1>Data de início</h1>
+        
+        <div className="date-container">
+            
+          <select className="date-picker">
+            {dayOptions.map((month)=>(
+              <option value={month}>{month}</option>
+            ))}
+          </select>
 
-        <div className="select-many-box">
-          <div className="select-box">
-            Dia <IoIosArrowDown/>
-          </div>
-          <div className="select-box">
-            Mês <IoIosArrowDown/>
-          </div>
-          <div className="select-box">
-            Ano <IoIosArrowDown/>
-          </div>
+          <select className="date-picker">
+            {monthOptions.map((month)=>(
+              <option value={month}>{month}</option>
+            ))}
+          </select>
+
+          <select className="date-picker">
+            {yearOptions.map((month)=>(
+              <option value={month}>{month}</option>
+            ))}
+          </select>
+
         </div>
 
-        <div>
-          <h3>*Capital em Caixa</h3>
+        <div className="amount-content">
+          <h1>*Capital em Caixa</h1>
           <div className="amount-box">
             <p>R$ 15.000,00</p>
           </div>
         </div>
+      </div>
 
+      <div className="table-container">
+        <OperationTable/>
       </div>
 
     </div>
